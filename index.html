@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Gistemp Data: Temperature Time Series Bar Chart</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    
+	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link href="gistemp1.css" rel="stylesheet">
+  </head>
+
+  <body>
+  
+		
+	
+	<div class ="description">
+	<div id="chart-container">
+		<div class="rangeslider" data-role="rangeslider">
+				<div data-role="main" class="ui-content">
+					<label for="yearstart">Year Start</label>
+					<input type="range" class="ysslider" name="yearstart" id="yearstart" value="1900" min="1880" max="2014">
+					<label for="yearend">Year End</label>
+					<input type="range" class="yeslider" name="yearend" id="yearend" value="2000" min="1880" max="2014">
+		</div>
+        <table>
+        <tr>
+            <td>
+              <select>
+				<option id="item" value="Jan">Jan Temperature</option>
+				<option id="item" value="Feb">Feb Temperature</option>
+				<option id="item" value="Mar">Mar Temperature</option>
+				<option id="item" value="Apr">Apr Temperature</option>
+				<option id="item" value="May">May Temperature</option>
+				<option id="item" value="Jun">Jun Temperature</option>
+				<option id="item" value="Jul">Jul Temperature</option>
+				<option id="item" value="Aug">Aug Temperature</option>
+				<option id="item" value="Sep">Sep Temperature</option>
+				<option id="item" value="Oct">Oct Temperature</option>
+				<option id="item" value="Nov">Nov Temperature</option>
+				<option id="item" value="Dec">Dec Temperature</option>
+				<option id="item" value="JDMean">J-D Mean Temperature</option>
+				<option id="item" value="MAM">MAM Temperature</option>
+				<option id="item" value="Glob">Glob Temperature</option>
+				<option id="item" value="NHem">NHem Temperature</option>
+				<option id="item" value="SHem">SHem Temperature</option>
+              </select>
+            </td>
+        </tr>
+        </table>
+        <!--<tr>
+              <td>
+                <ul>
+                  <li><input type="checkbox" class="checkbox" name="check" value="sort"> </li>
+                  <li>Sort by percent change</li>
+                </ul>
+              </div>
+            </td>
+        </tr>-->
+	
+
+    	<div id="titlerz">
+		<H2 id="titler" style="font-size: 20px; text-decoration: underline; float:left;width:90%;padding:0 1% 0 1%">Temperature vs Year Graph for : Jan between the years 1900 and 2000</H2> 
+		<p style="font-size: 12px; font-style: italic; position:absolute;left:50%;top:50%;width:30%;">Hover over the bars to see the values corresponding to each year. Change the pulldown on the side to change the different metrics and change the slider for different years.</p>
+		</div>
+		
+		<br>
+		<div class="mychart">
+			<script type="text/javascript" src="barchart1.js"></script>
+		</div> <!--description-->
+	</div>
+	</div>
+  </body>
+  </html>
+  
