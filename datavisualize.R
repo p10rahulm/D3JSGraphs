@@ -29,6 +29,4 @@ require(gridExtra)
 #plot2 <- qplot(1)
 Netplot <- grid.arrange(plot1, plot2, nrow=2)
 
-png("../DataMining/DataViz/D3jsHTML/D3JSGraphing/TemparatureTrends.png")
-print(Netplot)
-dev.off() #close the file
+ggsave("../DataMining/DataViz/D3jsHTML/D3JSGraphing/TemperatureTrends.png", arrangeGrob(plot1, plot2))
